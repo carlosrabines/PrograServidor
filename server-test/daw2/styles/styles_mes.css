@@ -1,0 +1,32 @@
+.contenedor-horizontal {
+  display: flex; /* Coloca los hijos en fila horizontal */
+  gap: 15px; /* Espacio de separación entre cada div */
+  height: 33%;
+}
+
+.caja {
+  min-width: 350px;
+  text-align: center;
+}
+
+.caja table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1;
+  font-family: Arial, sans-serif;
+}
+
+.caja th {
+  background-color: #f4f4f4;
+}
+
+.caja td,
+.caja th {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+.tabla-mes-domingo {
+  color: red;
+}

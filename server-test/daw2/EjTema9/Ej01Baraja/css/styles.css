@@ -1,0 +1,107 @@
+body {
+  background-color: #dceed8;
+  background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+img {
+  width: 65px;
+}
+
+.botones-izquierda {
+  width: 120px; /* Controla el ancho */
+  height: 40px; /* Controla el alto */
+  background-color: lightsalmon; /* Color gris un poco más oscuro */
+}
+
+.botones-derecha {
+  width: 120px; /* Controla el ancho */
+  height: 40px; /* Controla el alto */
+  background-color: lightblue; /* Color gris un poco más oscuro */
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: -0.01em;
+}
+
+/* color ara el texto de sugerencia (cuando haya) */
+input[type="text"]::placeholder {
+  color: #9ca3af;
+}
+
+/* Foco al hacer click o tab */
+input[type="text"]:focus,
+select:focus {
+  border-color: #2563eb; /* O #4B5563 para mantenerlo estrictamente monocromático */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.contenedor {
+  display: flex; /* Activa Flexbox para alinear los hijos en fila */
+  width: 98vw; /* Ocupa el 100% del ancho de la pantalla */
+  height: 85vh; /* Ocupa el 100% del alto de la pantalla */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.columna-izquierda,
+.columna-centro {
+  display: flex;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.columna-izquierda {
+  width: 20%;
+  background-color: #f0f0f0; /* Color gris claro para diferenciarlas */
+  justify-content: center;
+}
+
+.columna-centro {
+  flex-grow: 1; /* Ocupa el 60% restante automáticamente */
+  flex-direction: column;
+  background-color: #e0e0e0; /* Color gris un poco más oscuro */
+  gap: 1px;
+}
+
+.columna-izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.checkbox-grupo,
+.radio-grupo {
+  gap: 15px;
+  cursor: pointer;
+}
+
+.checkbox-opcion,
+.radio-opcion {
+  cursor: pointer;
+  gap: 8px; /* Espacio entre el círculo y el texto */
+}

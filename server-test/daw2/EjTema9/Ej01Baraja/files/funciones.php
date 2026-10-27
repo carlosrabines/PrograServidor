@@ -3,7 +3,7 @@
     function selecciona_baraja($palo, $cantidad, $orden) {
         // Obtiene todos los archivos .jpg de la carpeta
 
-        $arr_baraja = glob("../baraja_esp/*$palo.jpg");
+        $arr_baraja = glob("baraja_esp/*$palo.jpg");
 
         switch ($orden) {
             case "Ascendente":

@@ -9,8 +9,8 @@
 <body>
     <?php
 
-//        require("files/funciones.php");
         require_once("files/setcookies.php");
+        require("files/funciones.php");
 
         $mi_Heredoc = pantalla_inicio();
 

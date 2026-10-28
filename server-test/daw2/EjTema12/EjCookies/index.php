@@ -1,3 +1,10 @@
+<?php
+
+    require_once("files/setcookies.php");
+    require("files/funciones.php");
+
+    $mi_Heredoc = pantalla_inicio();
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,14 +15,7 @@
 </head>
 <body>
     <?php
-
-        require_once("files/setcookies.php");
-        require("files/funciones.php");
-
-        $mi_Heredoc = pantalla_inicio();
-
         echo $mi_Heredoc;
     ?>
-        
 </body>
 </html>

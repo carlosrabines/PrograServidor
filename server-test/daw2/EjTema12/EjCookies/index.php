@@ -18,7 +18,7 @@
         echo $mi_Heredoc;
 
         echo "<hr><h3>Contenido de las cookies:</h3>";
-        include("vercookies.php");
+        include("files/vercookies.php");
     ?>
 </body>
 </html>

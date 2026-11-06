@@ -1,0 +1,111 @@
+body {
+  background-color: #dceed8;
+  background-attachment: fixed;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+}
+
+body.tema-celeste {
+  background-color: lightblue;
+}
+
+body.tema-rosa {
+  background-color: pink;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: -0.01em;
+}
+
+.botones-izquierda {
+  min-width: 120px;
+  min-height: 40px;
+  background-color: lightsalmon;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contenedor {
+  width: 98vw;
+  min-height: 85vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.radio-grupo {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.radio-opcion {
+  cursor: pointer;
+}
+
+.cv-contenedor {
+  box-sizing: border-box;
+  width: min(100%, 680px);
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px black;
+}
+
+.cv-formulario p {
+  margin: 1.25rem 0;
+}
+
+.cv-formulario label,
+.cv-formulario input,
+.cv-formulario textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cv-formulario label {
+  margin-bottom: 0.4rem;
+}
+
+.cv-formulario input,
+.cv-formulario textarea {
+  padding: 0.65rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.cv-formulario input:focus,
+.cv-formulario textarea:focus {
+  border-color: #2563eb;
+  outline: 2px solid black;
+}
+
+.cv-enlace-reset {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+/*
+@media (max-width: 600px) {
+  body {
+    margin: 1rem;
+  }
+
+  .cv-contenedor {
+    margin: 1rem auto;
+    padding: 1.25rem;
+  }
+}
+*/

@@ -1,0 +1,41 @@
+{
+  "es": {
+    "title_pref": "Configuración de Preferencias",
+    "label_color": "Color de fondo:",
+    "label_lang": "Idioma de trabajo:",
+    "btn_cv": "introducir _cv",
+    "title_cv": "Formulario de Curriculum Vitae",
+    "name": "Nombre completo:",
+    "email": "Correo electrónico:",
+    "experience": "Experiencia laboral:",
+    "education": "Formación académica:",
+    "submit_cv": "Enviar CV",
+    "reset_choise": "Volver a elegir idioma y color de fondo"
+  },
+  "en": {
+    "title_pref": "Preferences Settings",
+    "label_color": "Background color:",
+    "label_lang": "Working language:",
+    "btn_cv": "introducir _cv",
+    "title_cv": "Curriculum Vitae Form",
+    "name": "Full name:",
+    "email": "Email address:",
+    "experience": "Work experience:",
+    "education": "Education:",
+    "submit_cv": "Submit CV",
+    "reset_choise": "Select language and background color again"
+  },
+  "fr": {
+    "title_pref": "Configuration des Préférences",
+    "label_color": "Couleur de fond :",
+    "label_lang": "Langue de travail :",
+    "btn_cv": "introducir _cv",
+    "title_cv": "Formulaire de Curriculum Vitae",
+    "name": "Nom complet :",
+    "email": "Adresse e-mail :",
+    "experience": "Expérience professionnelle :",
+    "education": "Formation académique :",
+    "submit_cv": "Envoyer le CV",
+    "reset_choise": "Choisir à nouveau la langue et la couleur de fond"
+  }
+}

@@ -1,6 +1,6 @@
 <?php
 
-    require_once("files/setcookies.php");
+    require_once("setcookies.php");
     require("files/funciones.php");
 
     $mi_Heredoc = pantalla_inicio();
@@ -18,7 +18,7 @@
         echo $mi_Heredoc;
 
         echo "<hr><h3>Contenido de las cookies:</h3>";
-        include("files/vercookies.php");
+        include("vercookies.php");
     ?>
 </body>
 </html>

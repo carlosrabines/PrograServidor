@@ -9,7 +9,7 @@
             $_SESSION['cuenta_fallas'] = 1;
         }
 
-        if ($accion == "Refresh") {
+        if ($accion == "Reset") {
             session_unset();
             session_destroy();
             session_start();
@@ -86,7 +86,7 @@
         $palabra_ahorcado = mb_str_split($palabra_ahorcado);
         $falta_acertar = 0;
         foreach($palabra_ahorcado as $letra) {
-            if ($ncolumna > 10) {
+            if ($ncolumna > 20) {
                 $cadena_html .= "</tr>\n";
                 $cadena_html .= "<tr>\n";
                 $ncolumna = 1;
@@ -133,8 +133,8 @@
         $cadena_html .= "<p>Cantidad de fallos: " . ($letra_fallos-1) . "</p>\n";
 
         if ($letra_fallos > 6 ) {
-            $cadena_html .= "<br><br><h2style='color: red;'>JUEGO FINALIZADO !!!</h2style=>\n";
-            $cadena_html .= "<br><h2style='color: red;'>USTED HA PERDIDO !!!</h2style=>\n";
+            $cadena_html .= "<br><br><h2 style='color: red;'>JUEGO FINALIZADO !!!</h2>\n";
+            $cadena_html .= "<br><h2 style='color: red;'>USTED HA PERDIDO !!!</h2>\n";
         }
         if ($falta_acertar == 0) {
             $cadena_html .= "<br><br><h2 style='color: green;'>JUEGO FINALIZADO !!!</h2>\n";
@@ -157,7 +157,7 @@
         $cadena_html .= "<tr>\n";
         $ncolumna = 1;
         foreach($abc_restante as $letra) {
-            if ($ncolumna > 10) {
+            if ($ncolumna > 12) {
                 $cadena_html .= "</tr>\n";
                 $cadena_html .= "<tr>\n";
                 $ncolumna = 1;
@@ -193,8 +193,7 @@
         ."<form action='{$_SERVER['PHP_SELF']}' method='POST' >\n"
             ."<div class='contenedor'>\n"
                 ."<div class='columna-izquierda'>\n"
-//                    ."<button type='submit' class='botones-izquierda' name='accion' value='Mostrar_letras'>Mostrar letras</button>\n"
-                    ."<button type='submit' class='botones-derecha' name='accion' value='Refresh'>Refresh</button>\n"
+                    ."<button type='submit' class='botones-derecha' name='accion' value='Reset'>Reiniciar</button>\n"
                 ."</div>\n"
                 ."<div class='columna-centro'>\n"
                     .$html_visualizar_letras_seleccionar

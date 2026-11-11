@@ -1,0 +1,11 @@
+Ejercicios de sesiones
+Requisitos de finalización
+1. Se debe realizar el fichero teórico que se adjunta , donde tocaremos el fichero php.ini para ver la importancia de las cookies a la hora de guardar los identificadores de sesión
+
+2. Realizar el  ejercicio de registro de usuarios, donde nos presentaba un formulario para darnos de alta. Debemos controlar todas las restricciones que queramos en cada campo, por ejemplo un identificador de usuario que no exista, que tenga mayúsculas, minúsculas y dígitos. Cuando nos pida algún dato del formulario que hubiésemos incluido erróneo nos lo vuelve a pedir en rojo , dejando cumplimentados el resto de los campos.
+Cuando empieza la session nos da la bienvenida con nuestro nombre y la posibilidad de salirnos de sesión.
+Los campos del registro pueden ser, nombre, apellidos, edad, dni. ciudad, código postal, país, estudios, idomas,
+y si alguien quiere añadir alguno más podría.
+El DNI debe comprobar siempre que la letra sea correcta, si no lo fuese pintaría en rojo.
+Ciudad si no fuese europea sería erróneo.
+Puedes validar algún otro dato que se considere necesario

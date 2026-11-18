@@ -17,7 +17,7 @@
             $mi_Heredoc = "Se ha ejecutado directamento, no valido !!";
          } else {
 
-            $s_msj = strtoupper($_GET['s_msj']);
+            $s_msj = $_GET['s_msj'];
             $s_captcha = $_GET['s_captcha'];
             $s_textousr = $_GET['s_textousr'];
             $s_color = $_GET['s_color'];

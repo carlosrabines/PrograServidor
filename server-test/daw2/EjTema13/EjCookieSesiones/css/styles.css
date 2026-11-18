@@ -1,0 +1,51 @@
+body {
+  background-color: #dceed8;
+  background-attachment: fixed;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: -0.01em;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #9ca3af;
+}
+
+/* Foco al hacer click o tab */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #2563eb; /* O #4B5563 para mantenerlo estrictamente monocromático */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.botones {
+  min-width: 120px;
+  min-height: 40px;
+  background-color: lightsalmon;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}

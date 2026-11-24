@@ -23,7 +23,7 @@
             $s_textousr = $_GET['s_textousr'];
             $s_color = $_GET['s_color'];
 
-            $html = "<h1>ERROR VALIDA CAPTCHA Captcha</h1>"
+            $html = "<h1>ERROR VALIDA CAPTCHA</h1>"
             ."<form action='index.php' method='POST' >\n"
                 ."<table>\n"
                     ."<tr>\n"

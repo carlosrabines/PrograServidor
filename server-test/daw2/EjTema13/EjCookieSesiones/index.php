@@ -1,20 +1,39 @@
 <?php
     session_start();
-    if (isset($_SESSION['cod_usuario']) &&
-        isset($_COOKIE['s_usuario']) &&
-        $_SESSION['cod_usuario'] == $_COOKIE['s_usuario']) {
+    require_once("files/funciones.php");
+
+    $usuarioSesion = $_SESSION['cod_usuario'] ?? null;
+    $usuarioCookie = $_COOKIE['cod_usuario'] ?? null;
+    $usuarioValidado = is_string($usuarioSesion)
+        && $usuarioSesion !== ''
+        && is_string($usuarioCookie)
+        && $usuarioCookie !== ''
+        && $usuarioSesion === $usuarioCookie;
+
+    if ($usuarioValidado) {
         header('Location: ingreso_datos.php');
         exit();
     }
-    echo $_SESSION['cod_usuario'];
 
-    if (isset($_REQUEST['s_usuario'])) {
-        $usuario = $_REQUEST['s_usuario'];
-        $clave = $_REQUEST['s_clave'];
+    unset($_SESSION['cod_usuario']);
+    setcookie('cod_usuario', '', time() - 3600, '/');
+    unset($_COOKIE['cod_usuario']);
 
-        setcookie('s_usuario', $usuario, time() + (30 * 24 * 60 * 60), "/");
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'
+        && isset($_POST['s_usuario'], $_POST['s_clave'])
+        && is_string($_POST['s_usuario'])
+        && is_string($_POST['s_clave'])) {
+        $usuario = $_POST['s_usuario'];
+        $clave = $_POST['s_clave'];
+
+        if (!validar_usuario($usuario, $clave)) {
+            $msj = 'Usuario o clave incorrectos';
+            header('Location: error.php?s_msj=' . urlencode($msj));
+            exit();
+        }
+
         $_SESSION['cod_usuario'] = $usuario;
-
+        setcookie('cod_usuario', $usuario, time() + (30 * 60), '/');
         header('Location: ingreso_datos.php');
         exit();
     }
@@ -31,9 +50,8 @@
     <body>
         <?php
         
-            require_once("files/funciones.php");
             $mi_Heredoc = pantalla_inicio();
-            echo $mi_Heredoc;require_once("files/funciones.php");
+            echo $mi_Heredoc;
        ?>
     </body>
 </html>

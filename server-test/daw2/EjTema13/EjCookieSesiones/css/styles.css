@@ -41,6 +41,10 @@ input[type="password"]:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
+input[type="number"] {
+  width: 120px;
+}
+
 .botones {
   min-width: 120px;
   min-height: 40px;

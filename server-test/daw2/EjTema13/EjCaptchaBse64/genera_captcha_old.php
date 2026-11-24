@@ -38,7 +38,7 @@ $posicion_x = (int) (($nuevo_ancho - $ancho_texto) / 2);
 for ($i = 0; $i < strlen($texto); $i++) {
     imagestring(
         $destino,
-        $posicion_x,
+        5,
         $posicion_x,
         random_int(20, 65),
         $texto[$i],

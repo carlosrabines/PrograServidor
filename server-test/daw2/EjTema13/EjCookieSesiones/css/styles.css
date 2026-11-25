@@ -34,10 +34,9 @@ input[type="password"]::placeholder {
   color: #9ca3af;
 }
 
-/* Foco al hacer click o tab */
 input[type="text"]:focus,
 input[type="password"]:focus {
-  border-color: #2563eb; /* O #4B5563 para mantenerlo estrictamente monocromático */
+  border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
@@ -52,4 +51,41 @@ input[type="number"] {
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.error {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.correcto {
+  color: #166534;
+  font-weight: 700;
+}
+
+.invalido,
+input.invalido {
+  background-color: #fecaca;
+  border: 2px solid #dc2626;
+}
+
+label.invalido {
+  color: #dc2626;
+  font-weight: 700;
+  background-color: transparent;
+  border: 0;
+}
+
+legend.invalido {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin: 12px 0;
 }

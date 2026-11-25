@@ -2,6 +2,14 @@
     session_start();
     require_once("files/funciones.php");
 
+    if (isset($_GET['reiniciar'])) {
+        $_SESSION = [];
+        session_unset();
+        session_destroy();
+        setcookie('cod_usuario', '', time() - 3600, '/');
+        unset($_COOKIE['cod_usuario']);
+    }
+
     $usuarioSesion = $_SESSION['cod_usuario'] ?? null;
     $usuarioCookie = $_COOKIE['cod_usuario'] ?? null;
     $usuarioValidado = is_string($usuarioSesion)
@@ -11,7 +19,7 @@
         && $usuarioSesion === $usuarioCookie;
 
     if ($usuarioValidado) {
-        header('Location: ingreso_datos.php');
+        header('Location: opciones.php');
         exit();
     }
 
@@ -34,7 +42,7 @@
 
         $_SESSION['cod_usuario'] = $usuario;
         setcookie('cod_usuario', $usuario, time() + (30 * 60), '/');
-        header('Location: ingreso_datos.php');
+        header('Location: opciones.php');
         exit();
     }
 

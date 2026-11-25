@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/MiCabecera.php';
+    require_once __DIR__ . '/MiCabecera.php';
 
-$cabecera = new MiCabecera(
-    'Segunda página',
-    'Formulario de nombre y apellido'
-);
+    $cabecera = new MiCabecera(
+        'Segunda página',
+        'Formulario de nombre y apellido'
+    );
 ?>
 <!DOCTYPE html>
 <html lang="es">
